@@ -31,6 +31,7 @@ gem 'spring',        group: :development
 
 # User management
 gem 'devise'
+gem 'cancancan'
 
 # Form magic
 gem 'simple_form'
