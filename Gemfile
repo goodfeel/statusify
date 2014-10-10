@@ -32,6 +32,9 @@ gem 'spring',        group: :development
 # User management
 gem 'devise'
 
+# Form magic
+gem 'simple_form'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
