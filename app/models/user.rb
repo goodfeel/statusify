@@ -5,9 +5,15 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :tweets
+  has_many :followings
 
   def to_s
     "@#{username}"
   end
+
+  def followers
+    Following.where(followed_id: self.id)
+  end
+
   
 end

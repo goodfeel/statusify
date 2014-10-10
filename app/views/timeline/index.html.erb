@@ -6,20 +6,20 @@
     <hr />
     <div class="col-lg-4">
       <h4>Statuses</h4>
-      30
+      <%= current_user.tweets.count %>
     </div>
     <div class="col-lg-4">
       <h4>Follwers</h4>
-      30
+      <%= current_user.followers.count %>
     </div>
     <div class="col-lg-4">
       <h4>Followings</h4>
-      30
+      <%= current_user.followings.count %>
     </div>
 
   </div>
   <div class="col-lg-7">
-test4
+    
   </div>
   <div class="col-lg-1">
 
