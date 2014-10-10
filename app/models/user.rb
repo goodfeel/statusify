@@ -5,5 +5,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :tweets
+
+  def to_s
+    "@#{username}"
+  end
   
 end

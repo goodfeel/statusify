@@ -1,3 +1,27 @@
 <div class="row">
+  <div class="col-lg-3 col-lg-offset-1 well">
+    <%= gravatar_image_tag(current_user.email, filetype: :png, rating: 'pg', size: 35, secure:false, class: 'img-circle' ) %>
+    <span class="pull-right"><h2><%= current_user %></h2></span>
+    <br />
+    <hr />
+    <div class="col-lg-4">
+      <h4>Statuses</h4>
+      30
+    </div>
+    <div class="col-lg-4">
+      <h4>Follwers</h4>
+      30
+    </div>
+    <div class="col-lg-4">
+      <h4>Followings</h4>
+      30
+    </div>
 
+  </div>
+  <div class="col-lg-7">
+test4
+  </div>
+  <div class="col-lg-1">
+
+  </div>
 </div>
