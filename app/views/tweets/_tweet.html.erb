@@ -4,6 +4,13 @@
   </div>
   <div class="col-lg-11">
     <%= tweet.user %> - <%= time_ago_in_words(tweet.created_at) %>
+    <% if current_user && tweet.user == current_user %>
+      <span class="pull-right">
+        <%= link_to tweet, method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <i class="fa fa-trash"></i> delete
+        <% end %>
+      </span>
+    <% end %>
     <br />
     <%= tweet %>
   </div>
