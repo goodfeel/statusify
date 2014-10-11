@@ -5,9 +5,9 @@
       <%= simple_form_for @tweet do |f| %>
         <%= f.input :tweet, as: :text, label: false, input_html: { class: 'col-lg-12', row: 5 } %>
         <br /><br /><br />
+        <span id="status_counter">0/141</span>
         <%= f.submit 'submit', class: 'btn btn-success pull-right btn-xs' %>
       <% end %>
-      <br />
     </div>
 
     <%= render @tweets %>

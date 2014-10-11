@@ -24,3 +24,24 @@ body {
   background:      -o-linear-gradient(90deg, #ECE9E6 10%, #FFFFFF 90%); /* Opera 11.10+ */
   background:         linear-gradient(90deg, #ECE9E6 10%, #FFFFFF 90%); /* W3C */  
 }
+
+
+a:link {
+    color: #000;
+}
+
+a:visited {
+    color: #000;
+}
+
+a:hover {
+    color: #000;
+}
+
+a:active {
+    color: #000;
+}
+
+a:link.btn {
+  color: #fff;
+}

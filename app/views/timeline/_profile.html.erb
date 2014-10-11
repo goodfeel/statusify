@@ -1,6 +1,6 @@
 <div class="col-lg-3 col-lg-offset-1 well">
   <%= gravatar_image_tag(current_user.email, filetype: :png, rating: 'pg', size: 35, secure:false, class: 'img-circle' ) %>
-  <span class="pull-right"><h2><%= current_user %></h2></span>
+  <span class="pull-right"><h2><%= link_to current_user, "/#{current_user.username}" %></h2></span>
   <br />
   <hr />
   <div class="col-lg-4">
