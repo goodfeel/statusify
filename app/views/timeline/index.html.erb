@@ -19,7 +19,16 @@
 
   </div>
   <div class="col-lg-7">
-    
+    <div class="well">
+      <%= simple_form_for @tweet do |f| %>
+        <%= f.input :tweet, as: :text, label: false, input_html: { class: 'col-lg-12', row: 5 } %>
+        <br /><br /><br />
+        <%= f.submit 'submit', class: 'btn btn-success pull-right btn-xs' %>
+      <% end %>
+      <br />
+    </div>
+
+    <%= render @tweets %>
   </div>
   <div class="col-lg-1">
 

@@ -1,3 +1,13 @@
 <div class="well">
-  test
+  <div class="col-lg-1">
+    <img src="<%= gravatar_image_url(current_user.email, filetype: :png, rating: 'pg', size: 60, secure:false) %>" height="50" width="50" class="img-circle" />
+  </div>
+  <div class="col-lg-11">
+    <%= tweet.user %> - <%= time_ago_in_words(tweet.created_at) %>
+    <br />
+    <%= tweet %>
+  </div>
+  <br />
+  <br />
+  <br />
 </div>
