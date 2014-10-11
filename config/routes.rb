@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
   resources :timeline, only: :index
   resources :tweets
-  
+
+  get ':id' => 'users#show'
+
   root 'home#index'
   
   # The priority is based upon order of creation: first created -> highest priority.
