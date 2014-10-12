@@ -18,10 +18,10 @@
   </div>
   <div class="col-lg-4">
     <h4>Follwers</h4>
-    <%= @user.followers.count %>
+    <%= link_to @user.followers.count, [@user, :followings, followed: true] %>
   </div>
   <div class="col-lg-4">
     <h4>Followings</h4>
-    <%= @user.followings.count %>
+    <%= link_to @user.followings.count, [@user, :followings] %>
   </div>
 </div>

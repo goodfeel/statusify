@@ -8,6 +8,17 @@ class FollowingsController < BackendController
   end
 
   def index
+    @user = User.find(params[:user_id])
+    get_following
+
+    if params[:followed]
+      @heading = "Followed by"
+      @followings = User.find(Following.where(followed_id: @user.id).pluck(:user_id))
+    else
+      @heading = "Following"
+      @followings = User.find(@user.followings.pluck(:followed_id))
+    end
+
   end
 
   def destroy
@@ -28,6 +39,14 @@ class FollowingsController < BackendController
 
   def find_username
     @username = User.find(params[:user_id]).username
+  end
+
+  def get_following
+    if current_user
+      @following = current_user.followings.where(followed_id: @user.id).first_or_initialize
+    else
+      @following = @user.followings.new
+    end
   end
 
 end

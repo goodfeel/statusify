@@ -1,0 +1,10 @@
+<div class="col-lg-12">
+  <div class="col-lg-1">
+     <img src="<%= gravatar_image_url(following.email, filetype: :png, rating: 'pg', size: 60, secure:false) %>" height="50" width="50" class="img-circle" />
+  </div>
+  <div class="col-lg-11">
+    <h4><%= link_to following, "/#{following.username}", target: '_blank' %></h4>
+  </div>
+</div>
+<hr />
+<br />

@@ -8,12 +8,12 @@
     <%= current_user.tweets.count %>
   </div>
   <div class="col-lg-4">
-    <h4>Follwers</h4>
-    <%= current_user.followers.count %>
+    <h4>Followers</h4>
+    <%= link_to current_user.followers.count, [current_user, :followings, followed: true] %>
   </div>
   <div class="col-lg-4">
     <h4>Followings</h4>
-    <%= current_user.followings.count %>
+    <%= link_to current_user.followings.count, [current_user, :followings] %>
   </div>
 
 </div>
