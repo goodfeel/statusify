@@ -6,4 +6,8 @@ class Tweet < ActiveRecord::Base
   def to_s
     tweet
   end
+
+  def self.get_tweet(user)
+    Tweet.where("user_id IN (?)", user.followings.pluck(:followed_id) + [user.id]).limit(200)
+  end
 end

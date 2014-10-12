@@ -45,6 +45,8 @@ gem 'gravatar_image_tag'
 # Use unicorn as the app server
 gem 'unicorn'
 
+gem 'pry', group: [:development, :test]
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

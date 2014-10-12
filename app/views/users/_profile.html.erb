@@ -3,7 +3,11 @@
   <span class="pull-right"><h2><%= @user %></h2></span>
   <br />
   <br />
-  <a href="#" class="btn btn-info btn-sm pull-right">Follow</a>
+  <% if able_to_follow?(@user) %>
+    <%= simple_form_for [@user, @following] do |f| %>
+      <%= f.submit 'Follow', class: 'btn btn-info btn-sm pull-right' %>
+    <% end %> 
+  <% end %>
   <br />
   <hr />
   <div class="col-lg-4">

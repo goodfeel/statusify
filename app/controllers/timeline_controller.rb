@@ -6,6 +6,6 @@ class TimelineController < BackendController
 
   private
   def get_status
-    @tweets = Tweet.where("user_id = ?", current_user.followings.pluck(:id) + [current_user.id]).limit(200)
+    @tweets = Tweet.get_tweet(current_user)
   end
 end

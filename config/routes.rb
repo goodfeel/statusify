@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
 
+  resources :users do
+    resources :followings
+  end
+
   resources :timeline, only: :index
   resources :tweets
 
