@@ -7,6 +7,8 @@
     <%= simple_form_for [@user, @following] do |f| %>
       <%= f.submit 'Follow', class: 'btn btn-info btn-sm pull-right' %>
     <% end %> 
+  <% elsif @following.persisted? %>
+    <%= link_to 'Unfollow', [@user, @following], method: :delete, class: 'btn btn-warning btn-sm pull-right', data: { confirm: 'Are you want to unfollow this user?' } %>
   <% end %>
   <br />
   <hr />
